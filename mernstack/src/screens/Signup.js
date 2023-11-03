@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -10,15 +12,15 @@ const Signup = () => {
   });
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log(
-        JSON.stringify({
-          name: credentials.name,
-          email: credentials.email,
-          password: credentials.password,
-          location: credentials.geolocation,
-        })
-      );
+    e.preventDefault();
+    console.log(
+      JSON.stringify({
+        name: credentials.name,
+        email: credentials.email,
+        password: credentials.password,
+        location: credentials.geolocation,
+      })
+    );
     const response = await fetch("http://localhost:5001/api/createuser", {
       method: "POST",
       headers: {
@@ -31,21 +33,27 @@ const Signup = () => {
         location: credentials.geolocation,
       }),
     });
-      const json = await response.json()
-      console.log(json);
-
-      if (!json.success) {
-          alert("Enter Valid Credentials")
+    const json = await response.json();
+    if (!json.success) {
+      // Check for the specific error message indicating duplicate email
+      if (json.error === "Email is already registered.") {
+        alert(
+          "Email is already registered. Please use a different email address."
+        );
+      } else {
+        alert("An error occurred. Please try again later.");
       }
+    } else {
+      navigate("/login");
+    }
   };
 
- const onChange = (e) => {
-   setCredentials((prevCredentials) => ({
-     ...prevCredentials,
-     [e.target.name]: e.target.value,
-   }));
- };
-
+  const onChange = (e) => {
+    setCredentials((prevCredentials) => ({
+      ...prevCredentials,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <>

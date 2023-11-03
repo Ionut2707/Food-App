@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Food = require("../models/Food")
+const FoodCategory = require("../models/Category")
 
 
 router.post("/createfood", async (req, res) => {
@@ -25,6 +26,15 @@ router.get("/getallfood", async (req, res) => {
     try {
         const data = await Food.find()
         return res.json(data);
+    } catch (err) {
+        console.log(err)
+    }
+})
+
+router.get("/getcategory", async (req, res) => {
+    try {
+        const data = await FoodCategory.find()
+        return res.json(data)
     } catch (err) {
         console.log(err)
     }

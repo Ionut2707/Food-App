@@ -17,6 +17,11 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+     const existingUser = await User.findOne({ email: req.body.email });
+     if (existingUser) {
+       return res.status(400).json({ error: "Email is already registered." });
+     }
+
     const salt = await bcrypt.genSalt(10);
     const secPassword = await bcrypt.hash(req.body.password, salt);
 
@@ -50,6 +55,7 @@ router.post(
     }
     const email = req.body.email;
     try {
+
       const userData = await User.findOne({ email });
 
       if (!userData) {

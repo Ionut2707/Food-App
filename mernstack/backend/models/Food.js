@@ -17,17 +17,20 @@ const FoodSchema = new Schema({
   },
   options: [
     {
-      price: {
-        half: { type: Number, required: true },
-        full: { type: Number, required: true },
+      half: {
+        type: Number,
+        required: true,
+      },
+      full: {
+        type: Number,
+        required: true,
       },
     },
-    ],
-    description: {
-        type: String,
-        required: true,
-  }
+  ],
+  description: {
+    type: String,
+    required: true,
+  },
 });
 
-
-module.exports = mongoose.model("food",FoodSchema)
+module.exports = mongoose.model("food", FoodSchema);

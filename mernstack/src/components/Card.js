@@ -1,4 +1,11 @@
-const Card = () => {
+const Card = (props) => {
+
+ const priceOptions = props.options;
+ const halfPrice = priceOptions[0].half;
+  const fullPrice = priceOptions[0].full;
+  
+  console.log(priceOptions)
+
   return (
     <div>
       <div>
@@ -7,13 +14,13 @@ const Card = () => {
           style={{ width: "18rem", maxHeight: "360px" }}
         >
           <img
-            src="https://media.istockphoto.com/id/1703810986/ro/fotografie/pizza-margherita-cu-sos-pelati-mozzarella-rosii-si-busuioc.jpg?s=612x612&w=0&k=20&c=N2twLjQQUGvyUOTiVEVgUsX3d1ij6WWXT5k_3cYb54g="
+            src={props.imgSrc}
             className="card-img-top"
             alt="..."
+            style={{height:"200px",objectFit:"fill"}}
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is some important Text</p>
+            <h4 className="card-title">{props.foodName}</h4>
             <div className="contaner w-100">
               <select className="m-2 h-100 bg-success">
                 {Array.from(Array(6), (e, i) => {
@@ -26,8 +33,8 @@ const Card = () => {
               </select>
 
               <select className="m-2 h-100 bg-success rounded">
-                <option value="half">Half</option>
-                <option value="full">Full</option>
+                <option value="half">Small - {halfPrice} $</option>
+                <option value="full">Big - {fullPrice} $</option>
               </select>
               <div className="d-inline h-100 fs-5">Total Price</div>
             </div>
@@ -36,5 +43,5 @@ const Card = () => {
       </div>
     </div>
   );
-}
-export default Card
+};
+export default Card;
