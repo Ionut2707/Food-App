@@ -1,0 +1,142 @@
+[
+  {
+    "categoryName": "Beverages",
+    "product": "Iced Coffee",
+    "img": "https://images.unsplash.com/photo-1592663527359-cf6642f54cff?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aWNlZCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D",
+    "options": [
+      {
+        "price": {
+          "half": 2.5,
+          "full": 3.5
+        }
+      }
+    ],
+    "description": "Refreshing iced coffee made from freshly ground beans."
+  },
+  {
+    "categoryName": "Desserts",
+    "product": "Chocolate Cake",
+    "img": "https://inbloombakery.com/wp-content/uploads/2023/02/chocolate-ganache-cake-FI-500x500.jpg",
+    "options": [
+      {
+        "price": {
+          "half": 4.5,
+          "full": 6.5
+        }
+      }
+    ],
+    "description": "Decadent chocolate cake with a rich and moist texture."
+  },
+  {
+    "categoryName": "Main Course",
+    "product": "Grilled Salmon",
+    "img": "https://media.istockphoto.com/id/1214416414/photo/barbecued-salmon-fried-potatoes-and-vegetables-on-wooden-background.jpg?s=612x612&w=0&k=20&c=Y8RYbZFcvec-FXMMuoU-qkprC3TUFNiw3Ysoe8Drn6g=",
+    "options": [
+      {
+        "price": {
+          "half": 8.5,
+          "full": 12.5
+        }
+      }
+    ],
+    "description": "Freshly grilled salmon seasoned with a blend of herbs and spices."
+  },
+  {
+    "categoryName": "Appetizers",
+    "product": "Garlic Bread",
+    "img": "https://t4.ftcdn.net/jpg/03/19/22/35/360_F_319223572_ILWIWBuhaeyTzGPLQ0rJCVtBSGOqw864.jpg",
+    "options": [
+      {
+        "price": {
+          "half": 2.0,
+          "full": 3.5
+        }
+      }
+    ],
+    "description": "Warm and crispy garlic bread served with a side of marinara sauce."
+  },
+  {
+    "categoryName": "Beverages",
+    "product": "Mango Smoothie",
+    "img": "data:image/jpeg;base64,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",
+    "options": [
+      {
+        "price": {
+          "half": 3.0,
+          "full": 4.5
+        }
+      }
+    ],
+    "description": "Creamy mango smoothie made with fresh ripe mangoes and yogurt."
+  },
+  {
+    "categoryName": "Desserts",
+    "product": "Vanilla Ice Cream",
+    "img": "https://www.biggerbolderbaking.com/wp-content/uploads/2018/05/Vanilla-2-Ingredient-Ice-cream2-scaled.jpg",
+    "options": [
+      {
+        "price": {
+          "half": 3.0,
+          "full": 5.0
+        }
+      }
+    ],
+    "description": "Smooth and creamy vanilla ice cream with a rich and sweet flavor."
+  },
+  {
+    "categoryName": "Main Course",
+    "product": "Chicken Alfredo",
+    "img": "https://bellyfull.net/wp-content/uploads/2021/02/Chicken-Alfredo-blog-3.jpg",
+    "options": [
+      {
+        "price": {
+          "half": 7.5,
+          "full": 10.5
+        }
+      }
+    ],
+    "description": "Creamy fettuccine Alfredo topped with seasoned grilled chicken."
+  },
+  {
+    "categoryName": "Appetizers",
+    "product": "Caprese Salad",
+    "img": "https://media.istockphoto.com/id/1265964525/photo/caprese-salad-with-tomatoes-mozzarella-cheese-basil-dark-background-close-up.jpg?s=612x612&w=0&k=20&c=L1iKAFQ-t1n7vCycKVdLYydt6G8S52TaCOUXSbnFmus=",
+    "options": [
+      {
+        "price": {
+          "half": 4.0,
+          "full": 6.5
+        }
+      }
+    ],
+    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze."
+  },
+  {
+    "categoryName": "Beverages",
+    "product": "Green Tea",
+    "img": "https://media.istockphoto.com/id/614992478/photo/like-tea.jpg?s=612x612&w=0&k=20&c=lO_3JqKoptj7WF32Oy4E3zDJi4HhYQAXgm5XRoiB_Fw=",
+    "options": [
+      {
+        "price": {
+          "half": 2.0,
+          "full": 3.0
+        }
+      }
+    ],
+    "description": "Organic green tea served hot with a soothing and refreshing taste."
+  },
+  {
+    "categoryName": "Desserts",
+    "product": "Fruit Tart",
+    "img": "https://media.istockphoto.com/id/157610681/photo/fruit-tart.jpg?s=612x612&w=0&k=20&c=NNEklnFwy8p9aZa0e0w8qOjtDmUNTWM_Rzw7vAVwBo4=",
+    "options": [
+      {
+        "price": {
+          "half": 5.0,
+          "full": 7.0
+        }
+      }
+    ],
+    "description": "Colorful fruit tart with a buttery crust and a sweet custard filling."
+  }
+]
