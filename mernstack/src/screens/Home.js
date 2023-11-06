@@ -39,8 +39,6 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, []);
-  console.log(foodItem);
-  console.log(foodCat);
 
   return (
     <div>
@@ -139,12 +137,11 @@ const Home = () => {
                   .map((filterItem) => (
                     <div
                       key={filterItem._id}
-                      className="col-12 col-md-6 col-lg-3"
+                      className="col-12 col-md-5 col-lg-3"
                     >
                       <Card
-                        foodName={filterItem.product}
+                        foodItem = {filterItem}
                         options={filterItem.options}
-                        imgSrc={filterItem.img}
                       />
                     </div>
                   ))}
