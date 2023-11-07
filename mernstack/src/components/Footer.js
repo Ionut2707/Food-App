@@ -10,7 +10,7 @@ const Footer = () => {
           >
             
           </Link>
-          <span className="text-muted">© 2023 Food App, Inc</span>
+          <span className="text-muted ">© 2023 Food App, Inc</span>
         </div>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

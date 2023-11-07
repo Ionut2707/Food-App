@@ -6,7 +6,7 @@ const MODAL_STYLES = {
   position: "fixed",
   top: "50%",
   left: "50%",
-  backgroundColor: "rgb(34,34,34)",
+  backgroundColor: "white",
   transform: "translate(-50%,-50%)",
   zIndex: 1000,
   height: "90%",
@@ -19,7 +19,7 @@ const OVERLAY_STYLES = {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: "rgba(0,0,0,.7)",
+  backgroundColor: "rgba(0,0,0,.3)",
   zIndex: 1000,
 };
 

@@ -35,7 +35,6 @@ const Signup = () => {
     });
     const json = await response.json();
     if (!json.success) {
-      // Check for the specific error message indicating duplicate email
       if (json.error === "Email is already registered.") {
         alert(
           "Email is already registered. Please use a different email address."

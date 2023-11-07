@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const connectDB = require('./db')
 const createUser = require('../backend/Routes/CreateUser')
 const createFood = require("../backend/Routes/CreateFood")
+const orderData = require("../backend/Routes/OrderData")
 const cors = require('cors')
 require('dotenv').config()
 
@@ -21,7 +22,8 @@ app.use(express.json());
 
 app.use("/api/",createFood)
 
-app.use("/api/",createUser)
+app.use("/api/", createUser)
+app.use("/api/",orderData)
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
